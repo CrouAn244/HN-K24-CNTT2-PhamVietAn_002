@@ -14,7 +14,6 @@ public class Bai2 {
 
         Map<Integer, Character> map = new HashMap<Integer, Character>();
 
-        // gom nhóm các từ (is, fun, and,...) có cùng độ dài và lưu vào map, key là độ dài của từ, value là danh sach các từ có cùng độ dài mỗi từ chỉ lưu 1 lần. input: "Java is fun, and java is powerful", output: 2 ký tự: [is], 3 ký tự: [fun, and], 4 ký tự: [java], 8 ký tự: [powerful].
         String[] words = text.split(" ");
         for (String word : words) {
             int length = word.length();
@@ -33,7 +32,6 @@ public class Bai2 {
                 }
             }
         }
-        // in ra nhóm từ theo thứ tự độ dài tăng dần, không in trùng lặp. input: "Java is fun, and java is powerful", output: 2 ký tự: [is], 3 ký tự: [fun, and], 4 ký tự: [java], 8 ký tự: [powerful].
         for (int length : lengths) {
             System.out.print(length + " ký tự: [");
             for (String word : words) {
